@@ -1,0 +1,123 @@
+body {
+ margin: 0;
+ min-height: 100vh;
+ overflow-x: hidden;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+
+h1, p {
+ font-family: "Lugrasimo", cursive;
+}
+
+
+
+
+
+
+.image img {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100vw;
+ height: 100vh;
+ object-fit: cover;
+ z-index: -2;
+}
+
+
+
+
+
+
+.hero {
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+h1 {
+ font-size: 5em;
+ margin: 0;
+ text-align: center;
+ color: white;
+ font-weight: 400;
+
+
+ text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+ animation: pulse 4s infinite ease-in-out;
+}
+
+
+@keyframes pulse {
+ 0% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+ 50% { text-shadow: 0 0 30px rgba(255,255,255,0.9); }
+ 100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+}
+
+
+/* ===== TEXT SECTION ===== */
+
+
+.text-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 10em;
+ padding-bottom: 20vh;
+
+
+  background: rgba(255, 255, 255, 0.05);
+ backdrop-filter: blur(3px);
+}
+
+
+
+
+.text-container p {
+ font-size: 1em;
+ margin: 0;
+ padding: 2em;
+ width: 60%;
+ color: brown;
+ font-weight: lighter;
+ text-align: center;
+ margin: 0%;
+ gap: 10em;
+
+
+ transition:
+   font-size 0.8s ease,
+   transform 0.8s ease,
+   opacity 0.8s ease,
+   margin 0.8s ease,
+   padding 0.8s ease;
+}
+
+
+
+
+.text-container:hover p {
+ opacity: 0.3;
+ transform: scale(0.9);
+}
+
+.text-container p:hover {
+ font-size: 1.5em;
+ opacity: 1;
+ transform: scale(1.05);
+ margin: 4em 0;
+ padding: 2em;
+ z-index: 2;
+ gap: 10em;
+}

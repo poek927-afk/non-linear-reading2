@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+
+
+  
+</head>
+<body>
+<div class="bg-overlay"></div>
+
+
+<h1>Jorge Luis Borges</h1>
+
+
+<div class="list-container">
+
+
+ <h2 data-bg="../imgs/Garden-Paths.jpg">
+   <a href="GFP.html">
+     <img src="../imgs/Garden-Paths.jpg" alt="Garden of Forking Paths">
+     <span class="card-title">Garden of Forking Paths</span>
+   </a>
+ </h2>
+
+
+ <h2 data-bg="../imgs/circular-ruins.jpg">
+   <a href="TCR.html">
+     <img src="../imgs/circular-ruins.jpg" alt="The Circular Ruins">
+     <span class="card-title">The Circular Ruins</span>
+   </a>
+ </h2>
+
+
+ <h2 data-bg="../imgs/book-of-sands.jpg">
+   <a href="BOS.html">
+     <img src="../imgs/book-of-sands.jpg" alt="The Book of Sand">
+     <span class="card-title">The Book of Sand</span>
+   </a>
+ </h2>
+
+
+</div>
+
+
+ 
+
+
+<script>
+const cards = document.querySelectorAll('.list-container h2');
+const bg = document.querySelector('.bg-overlay');
+
+
+cards.forEach(card => {
+   card.addEventListener('mouseenter', () => {
+       const img = card.getAttribute('data-bg');
+       bg.style.backgroundImage = `url(${img})`;
+       bg.style.opacity = '1';
+   });
+
+
+   card.addEventListener('mouseleave', () => {
+       bg.style.opacity = '0';
+   });
+});
+</script>
+</body>
+
+
+</html>

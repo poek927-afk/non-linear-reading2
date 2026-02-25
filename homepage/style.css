@@ -1,0 +1,121 @@
+.bg-overlay {
+   position: fixed;
+   inset: 0;
+   background-size: cover;
+   background-position: center;
+   filter: blur(40px) brightness(0.4);
+   opacity: 0;
+   transition: opacity 0.6s ease, background-image 0.6s ease;
+   z-index: -1;
+}
+
+
+h1 {
+   font-size: 7vw;
+   margin: 3vh 0;
+   text-align: center;
+   font-family: fantasy;
+   font-weight: bold;
+   font-style: cursive;
+   color: white;
+
+
+   opacity: 0;
+   transform: translateY(30px);
+   filter: blur(8px);
+
+
+   animation: titleReveal 2.5s ease forwards,
+              voidPulse 6s ease-in-out 2.5s infinite;
+
+
+   will-change: transform, text-shadow, filter, opacity;
+}
+
+
+@keyframes titleReveal {
+   to {
+       opacity: 1;
+       transform: translateY(0);
+       filter: blur(0);
+   }
+}
+
+
+@keyframes voidPulse {
+   0%, 100% {
+       text-shadow:
+           0 0 10px rgba(0,0,0,0.8),
+           0 0 15px rgba(255,80,0,0.2);
+   }
+   50% {
+       text-shadow:
+           0 0 60px rgba(0,0,0,1),
+           0 0 40px rgba(255,50,0,0.6);
+   }
+}
+
+
+.list-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+}
+
+
+.list-container h2 {
+   width: 600px;
+   overflow: hidden;
+   margin: 0;
+   transition: transform 0.4s ease;
+}
+
+
+.list-container h2:hover {
+   transform: scale(1.1);
+}
+
+
+.list-container img {
+   width: 100%;
+   height: 350px;
+   object-fit: cover;
+   display: block;
+}
+
+
+.list-container h2 a {
+   display: flex;
+   flex-direction: column;
+   text-decoration: none;
+   color: #e6e0d6;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-weight: lighter;
+   font-size: 1em;
+}
+.card-title {
+   padding: 25px 0;
+   text-align: center;
+   transition: text-shadow 0.4s ease, transform 0.4s ease;
+  
+}
+
+
+.list-container h2:hover .card-title {
+   text-shadow:
+       0 0 25px rgba(255, 80, 0, 0.6),
+       0 0 40px rgba(0, 0, 0, 1);
+   transform: translateY(-3px);
+   transform: scale(1.5);
+}
+
+
+body {
+   background-color: rgb(41, 52, 55);
+   position: relative;
+   z-index: 1;
+
+
+}
